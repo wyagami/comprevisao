@@ -5,6 +5,5 @@ re
 math
 collections
 unicodedata
-nltk==3.5
 pandas
 csv
