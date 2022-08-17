@@ -1,10 +1,10 @@
-streamlit as st
-numpy as np
-pandas as pd
+streamlit
+numpy
+pandas
 re
 math
 collections
 unicodedata
-nltk
+nltk==3.5
 pandas
 csv
