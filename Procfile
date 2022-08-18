@@ -1,1 +1,1 @@
-web: gunicorn comprevisao:comprevisao.wsgi
+web: gunicorn Comprevisao
