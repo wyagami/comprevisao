@@ -1,7 +1,7 @@
 streamlit
 numpy
 pandas
-re
+regex==2020.9.27
 math
 collections
 unicodedata
