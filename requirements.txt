@@ -4,3 +4,4 @@ pandas
 regex
 pandas
 gunicorn
+nltk
