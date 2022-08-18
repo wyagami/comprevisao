@@ -2,7 +2,7 @@ streamlit
 numpy
 pandas
 regex
-math
+mpmath
 collections
 unicodedata
 pandas
