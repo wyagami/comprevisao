@@ -1,1 +1,1 @@
-web gunicorn comprevisao:app
+web: gunicorn --pythonpath comprevisao:comprevisao.wsgi
