@@ -1,1 +1,1 @@
-web gunicorn
+web=1 -a comprevisao
