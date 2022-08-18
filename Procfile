@@ -1,1 +1,1 @@
-web: gunicorn app:comprevisao
+web: gunicorn comprevisao:app
