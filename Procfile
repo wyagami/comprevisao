@@ -1,1 +1,1 @@
-web=1 -a comprevisao
+scale web=1
