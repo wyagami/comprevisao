@@ -1,2 +1,1 @@
-web: gunicorn Comprevisao
-streamlit run Comprevisao.py
+web: sh setup.sh && streamlit run Comprevisao.py
