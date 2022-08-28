@@ -9,7 +9,7 @@ from nltk import ngrams
 from pandas import DataFrame
 import csv
 
-st.title("Comprevisão")
+st.title("Comprevisão-2")
 st.text("Sistema de orçamento")
 
 catalogo = ''
@@ -137,7 +137,7 @@ try:
         w2  = words['Produto'][v]
         w22 = words['Preco'][v]
         v = v+1
-        list_cutoff = [1,0.9,0.8,0.7,0.6]
+        list_cutoff = [1,0.9,0.8,0.7,0.6,0.5]
         for cutoff in list_cutoff:
           similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
           if similarity_sentence_text_bigram >= similarity_sentence_text_bigram_ant and similarity_sentence_text_bigram  > 0 and similarity_sentence_text_bigram  >= cutoff:
