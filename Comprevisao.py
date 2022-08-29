@@ -109,7 +109,7 @@ def get_dataframe_similarity(comparer, finder, cutoff):
 
 df = pd.DataFrame(columns=['Produto','Unitario','Descrição','Qtde','Valor'])
 
-pd.set_option('display.max_colwidth', 50)
+pd.set_option('display.max_colwidth', 150)
 
 def insert(df, row):
     insert_loc = df.index.max()
