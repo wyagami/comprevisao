@@ -135,11 +135,6 @@ try:
     z = 0
     similarity_sentence_text_bigram_ant = 0
     if not w1 in removidos:
-      w1 = catalogo['Produto'][i]
-      w11 = catalogo['Qtde'][i]
-      result = []
-      z = 0
-      similarity_sentence_text_bigram_ant = 0
       v = 0
       n = 0
       for n in range(len(words)):
@@ -160,8 +155,10 @@ try:
                                 
                     break
 
-                    if z == 1:
-                        break
+                if z == 1:
+                    break
+            if z == 1:
+                break
                     
   # =============================================================================
   def remove_values_from_list(the_list, val):
