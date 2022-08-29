@@ -107,7 +107,7 @@ def get_dataframe_similarity(comparer, finder, cutoff):
     dataFrame['marca'] = result[..., 1]
     return dataFrame
 
-df = pd.DataFrame(columns=['Produto','Unitario','Descrição','Qtde','Valor'], widths =[10,10,100,10,10])
+df = pd.DataFrame(columns=['Produto','Unitario','Descrição','Qtde','Valor'])
 
 def insert(df, row):
     insert_loc = df.index.max()
