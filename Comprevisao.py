@@ -145,7 +145,7 @@ try:
         for cutoff in list_cutoff:
           similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
           if similarity_sentence_text_bigram >= similarity_sentence_text_bigram_ant and similarity_sentence_text_bigram  > 0 and similarity_sentence_text_bigram  >= cutoff:
-            insert(df,['{:<100}'.format(str(w2)),'{:>10}'.format(str(w22)),'{:<100}'.format(str(w1)),'{:>25}'.format(str(w11)),'{:>25}'.format(str(float(w11)*float(w22)))])
+            insert(df,['{:<100}'.format(str(w2)),'{:>10}'.format(str(w22)),'{:<100}'.format(str(w1)),'{:>15}'.format(str(w11)),'{:>15}'.format(str(float(w11)*float(w22)))])
 #            result.append('{:<40}'.format(str(w2)) + ";" + '{:>9}'.format(str(w22)) + ";" + '{:<40}'.format(str(w1)) + ";" + '{:>13}'.format(str(w11)) + ";" + '{:>13}'.format(str(float(w11)*float(w22))))
             total = total + (float(w11)*float(w22))
             removidos.append(w1)
