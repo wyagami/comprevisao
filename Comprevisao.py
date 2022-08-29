@@ -159,6 +159,8 @@ try:
                     break
             if z == 1:
                 break
+        if z == 1:
+            break
                     
   # =============================================================================
   def remove_values_from_list(the_list, val):
