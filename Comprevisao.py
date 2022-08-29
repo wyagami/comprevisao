@@ -135,6 +135,8 @@ try:
     z = 0
     similarity_sentence_text_bigram_ant = 0
     if not w1 in removidos:
+      w1 = catalogo['Produto'][i]
+      w11 = catalogo['Qtde'][i]
       v = 0
       n = 0
       for n in range(len(words)):
@@ -143,7 +145,6 @@ try:
         v = v+1
 #        list_cutoff = [0.5,0.6,0.7,0.8,0.9,1]
         list_cutoff = [1,0.9,0.8,0.7,0.6,0.5]
-        list_cutoff.sort(reverse=False)
         for cutoff in list_cutoff:
             if not w1 in removidos:
                 similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
