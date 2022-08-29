@@ -141,8 +141,8 @@ try:
         w2  = words['Produto'][v]
         w22 = words['Preco'][v]
         v = v+1
-        list_cutoff = [0.5,0.6,0.7,0.8,0.9,1]
-        #list_cutoff = [1,0.9,0.8,0.7,0.6,0.5]
+#        list_cutoff = [0.5,0.6,0.7,0.8,0.9,1]
+        list_cutoff = [1,0.9,0.8,0.7,0.6]
         for cutoff in list_cutoff:
             if not w1 in removidos:
                 similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
