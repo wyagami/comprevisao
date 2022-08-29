@@ -170,7 +170,8 @@ try:
   #cleanlist.append("Produto; PrUnit; Produtos; Qtde; Valor")                    
 #  [cleanlist.append(x) for x in final if x not in cleanlist]
   
-  df = df.fillna(0)
+  df['Qtde'] = df['Qtde'] .replace(np.nan, 0)
+  df['Valor'] = df['Valor'] .replace(np.nan, 0)
   st.dataframe(df)
 
   st.write('Valor total da compra = R$  ' + str(total))
