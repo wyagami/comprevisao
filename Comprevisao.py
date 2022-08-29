@@ -107,7 +107,7 @@ def get_dataframe_similarity(comparer, finder, cutoff):
     dataFrame['marca'] = result[..., 1]
     return dataFrame
 
-pd.set_option('display.max_colwidth', 150)
+pd.set_option('display.width', 150)
 
 df = pd.DataFrame(columns=['Produto','Unitario','Descrição','Qtde','Valor'])
 
