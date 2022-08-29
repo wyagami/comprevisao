@@ -142,25 +142,20 @@ try:
         w22 = words['Preco'][v]
         v = v+1
         list_cutoff = [1,0.9,0.8,0.7,0.6,0.5]
-        for cutoff in list_cutoff and not w1 in removidos:
-          similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
-          if similarity_sentence_text_bigram >= similarity_sentence_text_bigram_ant and similarity_sentence_text_bigram  > 0 and similarity_sentence_text_bigram  >= cutoff:
-            insert(df,['{:<100}'.format(str(w2)),'{:>10}'.format(str(w22)),'{:<100}'.format(str(w1)),'{:>15}'.format(str(w11)),'{:>15}'.format(str(float(w11)*float(w22)))])
-#            result.append('{:<40}'.format(str(w2)) + ";" + '{:>9}'.format(str(w22)) + ";" + '{:<40}'.format(str(w1)) + ";" + '{:>13}'.format(str(w11)) + ";" + '{:>13}'.format(str(float(w11)*float(w22))))
-            total = total + (float(w11)*float(w22))
-            removidos.append(w1)
-            z = 1 
-            similarity_sentence_text_bigram_ant = similarity_sentence_text_bigram
-            #result=str(result)
-            #result= result.replace("['","")
-            #result= result.replace("'","")
-            #result= result.replace("]","")
+        for cutoff in list_cutoff:
+            if not w1 in removidos:
+                similarity_sentence_text_bigram = get_sentence_similarity(w1, w2, use_text_bigram=True)
+                if similarity_sentence_text_bigram >= similarity_sentence_text_bigram_ant and similarity_sentence_text_bigram  > 0 and similarity_sentence_text_bigram  >= cutoff:
+                    insert(df,['{:<100}'.format(str(w2)),'{:>10}'.format(str(w22)),'{:<100}'.format(str(w1)),'{:>15}'.format(str(w11)),'{:>15}'.format(str(float(w11)*float(w22)))])
+                    total = total + (float(w11)*float(w22))
+                    removidos.append(w1)
+                    z = 1 
+                    similarity_sentence_text_bigram_ant = similarity_sentence_text_bigram
                                 
-            #final.append(result)
-            break
+                    break
 
-            if z == 1:
-              break
+                    if z == 1:
+                        break
                     
   # =============================================================================
   def remove_values_from_list(the_list, val):
