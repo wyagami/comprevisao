@@ -9,7 +9,7 @@ from nltk import ngrams
 from pandas import DataFrame
 import csv
 
-st.title("Comprevisão-1")
+st.title("Comprevisão")
 st.text("Sistema de orçamento")
 
 catalogo = ''
@@ -108,7 +108,7 @@ def get_dataframe_similarity(comparer, finder, cutoff):
     return dataFrame
 
 
-df = pd.DataFrame(columns=['Produto','Unitario','Descrição','Qtde','Valor'])
+df = pd.DataFrame(columns=['Produto                       ','Unitario      ','Descrição                                         ','Qtde     ','Valor        '])
 
 pd.set_option("max_colwidth", 100)
 
