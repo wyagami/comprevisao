@@ -129,7 +129,7 @@ try:
   final = []
   i = 0
   for i in range(len(catalogo)):
-    w1 = catalogo['Produto'][i].replace(" ", "")
+    w1 = catalogo['Produto'][i]
     w11 = catalogo['Qtde'][i]
     result = []
     z = 0
@@ -138,7 +138,7 @@ try:
       v = 0
       n = 0
       for n in range(len(words)):
-        w2  = words['Produto'][v].replace(" ", "")
+        w2  = words['Produto'][v]
         w22 = words['Preco'][v]
         v = v+1
 #        list_cutoff = [0.5,0.6,0.7,0.8,0.9,1]
