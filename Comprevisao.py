@@ -108,9 +108,9 @@ def get_dataframe_similarity(comparer, finder, cutoff):
     return dataFrame
 
 
-df = pd.DataFrame(columns=['Produto                       ','Unitario      ','Descrição                                         ','Qtde     ','Valor        '])
+df = pd.DataFrame(columns=['Produto                       ','Unitario      ','Descrição                                         ','Qtde         ','Valor          '])
 
-pd.set_option("max_colwidth", 100)
+#pd.set_option("max_colwidth", 100)
 
 
 def insert(df, row):
@@ -177,7 +177,7 @@ try:
 
   st.write('Valor total da compra = ' + str(total))
   
-  df = pd.DataFrame(columns=['Produto'])
+  df = pd.DataFrame(columns=['Produto                                '])
 
   st.text("Produtos não encontrados")
 
